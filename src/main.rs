@@ -1,3 +1,5 @@
+mod rust_beginning;
+
 fn main() {
-    println!("Hello, world!");
+    rust_beginning::say_hello();
 }
