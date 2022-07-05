@@ -16,7 +16,7 @@ fn main() {
         .read_line(&mut pick)
         .expect("Error in handling input!");
     
-    pick = pick.trim().to_string();
+    let pick = pick.trim().to_string();
 
     if pick.eq("1") { 
         chapter1_getting_started::say_hello();
