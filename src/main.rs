@@ -13,8 +13,8 @@ fn main() {
     io::stdin()
         .read_line(&mut pick)
         .expect("Error in handling input!");
-
-    if pick.eq("1") { // <-- input cannot be compared to "1"
+    
+    if pick.trim().eq("1") { 
         rust_beginning::say_hello();
     }
 }
