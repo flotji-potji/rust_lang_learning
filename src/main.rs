@@ -4,6 +4,7 @@ mod chapter1_getting_started;
 mod chapter2_guessing_game;
 mod chapter3_variables_mutability;
 mod chapter3_data_types;
+mod chapter3_functions;
 
 fn main() {
     println!("This is my journy through the Rust programming language.");
@@ -13,6 +14,7 @@ fn main() {
     println!("2. \t Chapter 2: Guessing Game");
     println!("3. \t Chapter 3: Variables and Mutability");
     println!("4. \t Chapter 3: Data Types");
+    println!("5. \t Chapter 3: Functions");
 
     let mut pick = String::new();
 
@@ -30,5 +32,7 @@ fn main() {
         chapter3_variables_mutability::fun();
     } else if pick.eq("4") {
         chapter3_data_types::data_types();
+    } else if pick.eq("5") {
+        chapter3_functions::boom();
     }
 }
