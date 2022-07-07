@@ -16,7 +16,7 @@ pub fn guessing_game() {
 
         io::stdin()
             .read_line(&mut guess)
-            .expect("Failed to rad line!");
+            .expect("Failed to read line!");
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
