@@ -7,6 +7,7 @@ mod chapter3_data_types;
 mod chapter3_functions;
 mod chapter3_branches_and_more;
 mod chapter3_temperature_converter;
+mod chapter4_slices;
 
 fn main() {
     println!("This is my journy through the Rust programming language.");
@@ -19,6 +20,7 @@ fn main() {
     println!("5. \t Chapter 3: Functions");
     println!("6. \t Chapter 3: Control Flow");
     println!("7. \t Chapter 3: Temperature Converter");
+    println!("8. \t Chapter 4: The Slice Type");
 
     let mut pick = String::new();
 
@@ -43,5 +45,7 @@ fn main() {
         chapter3_branches_and_more::froop_loops();
     } else if pick.eq("7") {
         chapter3_temperature_converter::temperature_fun();
+    } else if pick.eq("8") {
+        chapter4_slices::surprise();
     }
 }

@@ -19,7 +19,7 @@ pub fn temperature_fun() {
     let mut option: u8;
 
     loop {
-        pick = String::new();
+        pick.clear();
 
         println!("Please select the appropriate option for you:");
         println!("1. \t Fahrenheit to Celsius");
@@ -37,7 +37,7 @@ pub fn temperature_fun() {
 
         if option == 1 {
             loop {
-                pick = String::new();
+                pick.clear();
                 println!("Enter the Fahrenheit value as a floating point number: ");
                 io::stdin()
                     .read_line(&mut pick)
@@ -65,7 +65,7 @@ pub fn temperature_fun() {
             }
         } else if option == 2 {
             loop {
-                pick = String::new();
+                pick.clear();
                 println!("Enter the Celsius value as a floating point number: ");
                 io::stdin()
                     .read_line(&mut pick)
