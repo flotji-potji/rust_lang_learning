@@ -9,6 +9,7 @@ mod chapter3_branches_and_more;
 mod chapter3_temperature_converter;
 mod chapter4_slices;
 mod chapter5_initiating_structs;
+mod chapter5_rectangle;
 
 fn main() {
     println!("This is my journy through the Rust programming language.");
@@ -23,6 +24,7 @@ fn main() {
     println!("7. \t Chapter 3: Temperature Converter");
     println!("8. \t Chapter 4: The Slice Type");
     println!("9. \t Chapter 5: Defining Structs");
+    println!("10. \t Chapter 5: Rectangle Example");
 
     let mut pick = String::new();
 
@@ -51,5 +53,7 @@ fn main() {
         chapter4_slices::surprise();
     } else if pick.eq("9") {
         chapter5_initiating_structs::many_structs();
+    } else if pick.eq("10") {
+        chapter5_rectangle::start_rectangles();
     }
 }
