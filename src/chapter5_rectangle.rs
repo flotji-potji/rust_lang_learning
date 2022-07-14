@@ -6,6 +6,16 @@ struct Rectangle {
     height: u32,
 }
 
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn width(self: &Self) -> bool {     // "self: &Self" same as "&self"
+        self.width > 0
+    }
+}
+
 pub fn start_rectangles() {
     let scale = 2;
     let rect1 = Rectangle {
@@ -21,6 +31,20 @@ pub fn start_rectangles() {
         "The area of the rectangle is {} square pixels.",
         area(&rect1)
     );
+
+    let rect2 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect2.area()
+    );
+
+    if rect1.width() {
+        println!("The rectangle has a nonzero width; it is {}", rect1.width);
+    }
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
