@@ -1,15 +1,21 @@
 // Chapter 5 - Using Structs to Structure Related Data: An Example Program Using Structs
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
 }
 
 pub fn start_rectangles() {
+    let scale = 2;
     let rect1 = Rectangle {
-        width: 30,
+        width: dbg!(30 * scale),
         height: 50,
     };
+
+    dbg!(&rect1);
+
+    println!("rect1 is: {:?}", rect1);
 
     println!(
         "The area of the rectangle is {} square pixels.",
