@@ -14,6 +14,10 @@ impl Rectangle {
     fn width(self: &Self) -> bool {     // "self: &Self" same as "&self"
         self.width > 0
     }
+
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
 }
 
 pub fn start_rectangles() {
@@ -45,6 +49,25 @@ pub fn start_rectangles() {
     if rect1.width() {
         println!("The rectangle has a nonzero width; it is {}", rect1.width);
     }
+
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    let rect2 = Rectangle {
+        width: 10,
+        height: 40,
+    };
+
+    let rect3 = Rectangle {
+        width: 60, 
+        height: 45,
+    };
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect2 hold rect3? {}", rect2.can_hold(&rect3));
+
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
