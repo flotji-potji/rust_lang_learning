@@ -11,6 +11,7 @@ mod chapter4_slices;
 mod chapter5_initiating_structs;
 mod chapter5_rectangle;
 mod chapter6_defining_enums;
+mod chapter6_match_control;
 
 fn main() {
     println!("This is my journy through the Rust programming language.");
@@ -27,6 +28,7 @@ fn main() {
     println!("9. \t Chapter 5: Defining Structs");
     println!("10. \t Chapter 5: Rectangle Example");
     println!("11. \t Chapter 6: Defining Enums");
+    println!("12. \t Chapter 6: Match Control Flow");
 
     let mut pick = String::new();
 
@@ -59,5 +61,7 @@ fn main() {
         chapter5_rectangle::start_rectangles();
     } else if pick.eq("11") {
         chapter6_defining_enums::enum_fun();
+    } else if pick.eq("12") {
+        chapter6_match_control::coin_toss();
     }
 }
