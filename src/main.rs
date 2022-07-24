@@ -10,6 +10,7 @@ mod chapter3_temperature_converter;
 mod chapter4_slices;
 mod chapter5_initiating_structs;
 mod chapter5_rectangle;
+mod chapter6_defining_enums;
 
 fn main() {
     println!("This is my journy through the Rust programming language.");
@@ -25,6 +26,7 @@ fn main() {
     println!("8. \t Chapter 4: The Slice Type");
     println!("9. \t Chapter 5: Defining Structs");
     println!("10. \t Chapter 5: Rectangle Example");
+    println!("11. \t Chapter 6: Defining Enums");
 
     let mut pick = String::new();
 
@@ -55,5 +57,7 @@ fn main() {
         chapter5_initiating_structs::many_structs();
     } else if pick.eq("10") {
         chapter5_rectangle::start_rectangles();
+    } else if pick.eq("11") {
+        chapter6_defining_enums::enum_fun();
     }
 }
